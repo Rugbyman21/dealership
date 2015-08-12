@@ -2,6 +2,10 @@ require('rspec')
 require('dealership')
 
 describe(Dealership) do
+  before() do
+    Dealership.clear()
+  end
+
   describe('#name') do
     it("stores the name of dealership") do
       test_dealership = Dealership.new("Crazy Eddie's Crazy Deals")
