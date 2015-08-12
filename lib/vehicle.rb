@@ -1,5 +1,7 @@
 class Vehicle
 
+  @@vehicle = []
+
   define_method(:initialize) do |make, model, year|
     @make = make
     @model = model
@@ -17,4 +19,10 @@ class Vehicle
   define_method(:year) do
     @year
   end
+
+  define_singleton_method(:all) do
+    @@vehicle
+  end
+
+
 end
